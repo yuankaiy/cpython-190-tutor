@@ -152,6 +152,7 @@ class PyShellEditorWindow(EditorWindow):
         ("Cut", "<<cut>>", "rmenu_check_cut"),
         ("Copy", "<<copy>>", "rmenu_check_copy"),
         ("Paste", "<<paste>>", "rmenu_check_paste"),
+        ("Delete Line", "<<delete-line>>", None),
         (None, None, None),
         ("Set Breakpoint", "<<set-breakpoint>>", None),
         ("Clear Breakpoint", "<<clear-breakpoint>>", None)
