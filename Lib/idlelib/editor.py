@@ -123,7 +123,6 @@ class EditorWindow:
         text.bind("<<cut>>", self.cut)
         text.bind("<<copy>>", self.copy)
         text.bind("<<paste>>", self.paste)
-        text.bind("<<delete-line>>", self.delete_line)
         text.bind("<<center-insert>>", self.center_insert_event)
         text.bind("<<help>>", self.help_dialog)
         text.bind("<<python-docs>>", self.python_docs)
@@ -635,10 +634,6 @@ class EditorWindow:
     def remove_selection(self, event=None):
         self.text.tag_remove("sel", "1.0", "end")
         self.text.see("insert")
-        return "break"
-    
-    def delete_line(self, event=None):
-        self.text.delete("insert linestart", "insert lineend + 1c")
         return "break"
 
     def move_at_edge_if_selection(self, edge_index):
