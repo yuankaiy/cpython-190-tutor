@@ -43,6 +43,7 @@ menudefs = [
    ('_Redo', '<<redo>>'),
    None,
    ('Select _All', '<<select-all>>'),
+   ('Clear Editor', '<<clear-editor>>'),
    ('Cu_t', '<<cut>>'),
    ('_Copy', '<<copy>>'),
    ('_Paste', '<<paste>>'),
