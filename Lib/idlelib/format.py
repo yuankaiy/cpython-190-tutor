@@ -316,6 +316,13 @@ class FormatRegion:
         self.set_region(head, tail, chars, lines)
         return "break"
 
+    def uppercase_region_event(self, event=None):
+        head, tail, chars, lines = self.get_region()
+        for pos in range(len(lines)):
+            lines[pos] = lines[pos].upper()
+        self.set_region(head, tail, chars, lines)
+        return "break"
+
     def tabify_region_event(self, event=None):
         "Convert leading spaces to tabs for each line in selected region."
         head, tail, chars, lines = self.get_region()
