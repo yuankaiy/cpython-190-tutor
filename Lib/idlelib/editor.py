@@ -123,6 +123,7 @@ class EditorWindow:
         text.bind("<<cut>>", self.cut)
         text.bind("<<copy>>", self.copy)
         text.bind("<<paste>>", self.paste)
+        text.bind("<<insert-signature>>", self.insert_signature)
         text.bind("<<center-insert>>", self.center_insert_event)
         text.bind("<<help>>", self.help_dialog)
         text.bind("<<python-docs>>", self.python_docs)
@@ -623,6 +624,10 @@ class EditorWindow:
     def paste(self,event):
         self.text.event_generate("<<Paste>>")
         self.text.see("insert")
+        return "break"
+
+    def insert_signature(self,event):
+        self.text.insert("insert", " # APPROVED BY IDLE CEO")
         return "break"
 
     def select_all(self, event=None):
