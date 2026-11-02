@@ -46,6 +46,7 @@ menudefs = [
    ('Cu_t', '<<cut>>'),
    ('_Copy', '<<copy>>'),
    ('_Paste', '<<paste>>'),
+   ('Delete Line', '<<delete-line>>'),
    None,
    ('_Find...', '<<find>>'),
    ('Find A_gain', '<<find-again>>'),
