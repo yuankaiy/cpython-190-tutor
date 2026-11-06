@@ -131,6 +131,7 @@ class EditorWindow:
         text.bind("<<open-module>>", self.open_module_event)
         text.bind("<<do-nothing>>", lambda event: "break")
         text.bind("<<select-all>>", self.select_all)
+        text.bind("<<select-above>>", self.select_above)
         text.bind("<<remove-selection>>", self.remove_selection)
         text.bind("<<find>>", self.find_event)
         text.bind("<<find-again>>", self.find_again_event)
@@ -627,6 +628,12 @@ class EditorWindow:
 
     def select_all(self, event=None):
         self.text.tag_add("sel", "1.0", "end-1c")
+        self.text.mark_set("insert", "1.0")
+        self.text.see("insert")
+        return "break"
+
+    def select_above(self, event=None):
+        self.text.tag_add("sel", "1.0", "insert")
         self.text.mark_set("insert", "1.0")
         self.text.see("insert")
         return "break"
