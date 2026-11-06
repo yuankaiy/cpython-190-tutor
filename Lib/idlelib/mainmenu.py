@@ -66,6 +66,7 @@ menudefs = [
    ('_Dedent Region', '<<dedent-region>>'),
    ('Comment _Out Region', '<<comment-region>>'),
    ('U_ncomment Region', '<<uncomment-region>>'),
+   ('Uppercase Region', '<<uppercase-region>>'),
    ('Tabify Region', '<<tabify-region>>'),
    ('Untabify Region', '<<untabify-region>>'),
    ('Toggle Tabs', '<<toggle-tabs>>'),

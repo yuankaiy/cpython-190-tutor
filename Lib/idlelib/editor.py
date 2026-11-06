@@ -147,6 +147,7 @@ class EditorWindow:
         text.bind("<<dedent-region>>", fregion.dedent_region_event)
         text.bind("<<comment-region>>", fregion.comment_region_event)
         text.bind("<<uncomment-region>>", fregion.uncomment_region_event)
+        text.bind("<<uppercase-region>>", fregion.uppercase_region_event)
         text.bind("<<tabify-region>>", fregion.tabify_region_event)
         text.bind("<<untabify-region>>", fregion.untabify_region_event)
         indents = self.Indents(self)
